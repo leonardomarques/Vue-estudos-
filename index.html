@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Contador</h1>
+        <button v-on:click="diminuir(10)">-</button>
+        <span>{{numero}}</span>
+        <button v-on:click="somar(10)">+</button>
+    </div>
+    
+</body>
+
+<script>
+    new Vue (
+        {
+            el: '#app',
+            data(){
+                return{
+                    numero:0
+                }
+            },
+            methods:{
+                somar(valor){
+                    this.numero +=valor;
+                },
+                diminuir(valor){
+                    this.numero -=valor;
+                }
+            }
+        }
+    )
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
